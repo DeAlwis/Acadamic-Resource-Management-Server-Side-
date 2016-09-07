@@ -5,7 +5,6 @@
  */
 var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
-var User = require('./User');
 
 var Hod = connection.define('Hod',{
     status: Sequelize.BOOLEAN

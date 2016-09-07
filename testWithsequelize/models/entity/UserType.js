@@ -10,7 +10,7 @@ var UserType = connection.define('userType', {
     userTypeName: Sequelize.STRING,
     status: Sequelize.BOOLEAN
 },{
-    tableName: 'user_type', // this will define the table's name
+    tableName: 'user_type',
     updatedAt: 'updatedAt',
     createdAt: 'deletedAt',
     paranoid: true

@@ -5,7 +5,6 @@
  */
 var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
-var FeedbackSession = require('./FeedbackSession');
 
 var Subject = connection.define('Subject',{
     status: Sequelize.BOOLEAN

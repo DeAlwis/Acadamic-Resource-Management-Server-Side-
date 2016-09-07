@@ -5,7 +5,6 @@
  */
 var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
-var UserType = require('./UserType');
 
 var User = connection.define('User', {
     userFullName: Sequelize.STRING,
@@ -13,7 +12,7 @@ var User = connection.define('User', {
     userDitNo: Sequelize.STRING,
     status: Sequelize.BOOLEAN
 },{
-    tableName: 'user', // this will define the table's name
+    tableName: 'user',
     updatedAt: 'updatedAt',
     createdAt: 'createdAt',
     paranoid: true

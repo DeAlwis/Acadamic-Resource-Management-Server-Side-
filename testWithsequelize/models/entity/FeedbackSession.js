@@ -5,7 +5,6 @@
  */
 var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
-var Hod = require('./Hod');
 
 var FeedbackSession = connection.define('FeedbackSession',{
     status: Sequelize.BOOLEAN
