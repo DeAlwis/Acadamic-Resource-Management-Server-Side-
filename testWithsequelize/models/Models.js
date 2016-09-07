@@ -1,5 +1,7 @@
 /**
  * Created by User on 9/6/2016.
+ * Develop: Amila
+ * Registry of the model and every model have to register here
  */
 var Models = {};
 
@@ -17,5 +19,7 @@ Models.Faculty = require('./entity/Faculty');
 Models.Department = require('./entity/Department');
 Models.Batch = require('./entity/Batch');
 Models.Request = require('./entity/Request');
+Models.Room = require('./entity/Room');
+Models.Appointment = require('./entity/Appointment')
 
 module.exports = Models;

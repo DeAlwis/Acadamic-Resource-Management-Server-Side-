@@ -1,5 +1,7 @@
 /**
  * Created by User on 9/7/2016.
+ * Develop: Amila
+ * create relationship in between each models
  */
 var Models = require('./Models');
 var connection = require('./Connection');
@@ -45,6 +47,19 @@ var Relationship = function() {
 
     Models.Lecturer.belongsToMany(Models.Batch,{through: 'LecturerBatch'})
     Models.Batch.belongsToMany(Models.Lecturer, {through: 'LecturerBatch'})
+
+    Models.Student.hasMany(Models.Request)
+    Models.Request.belongsTo(Models.Student)
+
+    Models.Lecturer.hasMany(Models.Request)
+    Models.Request.belongsTo(Models.Lecturer)
+
+    Models.Lecturer.hasMany(Models.Room)
+    Models.Room.belongsTo(Models.Lecturer)
+
+    Models.Request.belongsTo(Models.Appointment)
+
+    Models.Room.belongsTo(Models.Appointment)
 
     connection
         .sync()

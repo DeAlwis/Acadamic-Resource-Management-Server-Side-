@@ -1,18 +1,18 @@
 /**
  * Created by User on 9/7/2016.
- * Develop: Amila
- * Model: Department
+ * develop: Amila
+ * model: Appointment
  */
 var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
-var Department = connection.define('Department',{
+var Appointment = connection.define('Appointment',{
     status: Sequelize.BOOLEAN
 },{
-    tableName: 'department',
+    tableName: 'appointment',
     updatedAt: 'updatedAt',
     createdAt: 'createdAt',
     paranoid: true
 });
 
-module.exports = Department;
+module.exports = Appointment;

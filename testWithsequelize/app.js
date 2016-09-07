@@ -6,9 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-//var users = require('./routes/users');
-//var User = require('./models/entity/User');
-//var Student = require('./models/entity/Student');
 var Models = require('./models/Models');
 var Relationship = require('./models/Relationship');
 var app = express();

@@ -1,5 +1,7 @@
 /**
  * Created by User on 9/6/2016.
+ * Develop: Amila
+ * Model: Student
  */
 var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
