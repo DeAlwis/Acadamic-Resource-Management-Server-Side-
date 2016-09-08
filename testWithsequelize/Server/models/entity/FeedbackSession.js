@@ -7,6 +7,7 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var FeedbackSession = connection.define('FeedbackSession',{
+
     status: Sequelize.BOOLEAN
 },{
     tableName: 'feedback_session',

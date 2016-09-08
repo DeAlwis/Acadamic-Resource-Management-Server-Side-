@@ -1,11 +1,13 @@
 /**
- * Created by User on 9/7/2016.
- * Develop: Amila
- * create relationship in between each models
+ * Created by Amila on 9/7/2016.
+ * Modified by Pasindu on 9/9/2016.
+ * create relationship in between each models.
  */
 var Models = require('./Models');
 var connection = require('./Connection');
 var Relationship = function() {
+
+
     Models.UserType.hasMany(Models.User)
     Models.User.belongsTo(Models.UserType)
 
@@ -60,6 +62,33 @@ var Relationship = function() {
     Models.Request.belongsTo(Models.Appointment)
 
     Models.Room.belongsTo(Models.Appointment)
+
+    /**added by pasindu*/
+    Models.User.hasMany(Models.Student)
+    Models.Student.belongsTo(Models.User)
+
+    Models.User.hasMany(Models.Hod)
+    Models.Hod.belongsTo(Models.User)
+
+    Models.User.hasMany(Models.Lecturer)
+    Models.Lecturer.belongsTo(Models.User)
+
+    Models.Lecturer.hasMany(Models.FeedBackSession)
+    Models.FeedBackSession.belongsTo(Models.Lecturer)
+
+    Models.FeedBackSession.belongsTo(Models.Subject)
+    Models.FeedBackSession.belongsTo(Models.Center)
+    Models.FeedBackSession.belongsTo(Models.Faculty)
+    Models.FeedBackSession.belongsTo(Models.Department)
+    Models.FeedBackSession.belongsTo(Models.Batch)
+
+
+
+
+
+
+
+
 
     connection
         .sync()
