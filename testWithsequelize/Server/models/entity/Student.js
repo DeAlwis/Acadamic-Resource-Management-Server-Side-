@@ -7,6 +7,8 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var Student = connection.define('Student',{
+    userFullName: Sequelize.STRING,
+    studentDitNo : Sequelize.STRING,
     status: Sequelize.BOOLEAN
 },{
     tableName: 'student',

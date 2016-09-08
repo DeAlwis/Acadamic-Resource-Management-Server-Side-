@@ -7,6 +7,8 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var Hod = connection.define('Hod',{
+    hodId : Sequelize.STRING,
+    hodFullName: Sequelize.STRING,
     status: Sequelize.BOOLEAN
 },{
     tableName: 'hod',
