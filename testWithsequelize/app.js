@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var Models = require('./models/Models');
-var Relationship = require('./models/Relationship');
+var routes = require('./Server/routes/index');
+var Models = require('./Server/models/Models');
+var Relationship = require('./Server/models/Relationship');
 var app = express();
 
 // view engine setup
