@@ -8,6 +8,8 @@ var UserType = Module.UserType;
 function UserTypeController() {
     /*
      * get all the user types without filtering
+     * @params
+     * res = response of middleware express
      */
     this.get = function(res) {
         UserType.findAll().then(function(data) {
@@ -17,14 +19,21 @@ function UserTypeController() {
 
     /*
      *insert new user type
+     * @params
+     * UserTypeInstance = Instance provided by the client
+     * res = response of middleware express
      */
     this.create = function(UserTypeInstance, res) {
         UserType.create(UserTypeInstance).then(function(data) {
             res.send(data);
         })
     };
+
     /*
      * update the excisting intances
+     * @params
+     * res = response of middleware express
+     * UserTypeInstance = Instance provided by the client
      */
     this.update = function(UserTypeInstance, res) {
         UserType.update({
@@ -37,8 +46,12 @@ function UserTypeController() {
            res.send(data);
         });
     };
+
     /*
      * delete the excisting intance
+     * @params
+     * res = response of middleware express
+     * UserTypeInstance = Instance provided by the client
      */
     this.delete = function(UserTypeInstance, res) {
         UserType.destroy({
