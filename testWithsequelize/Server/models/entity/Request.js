@@ -7,6 +7,11 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var Request = connection.define('Request',{
+
+    requestDate : Sequelize.DATEONLY,
+    requestStartTime : Sequelize.TIME,
+    requestEndTime : Sequelize.TIME,
+    requestSmallBref : Sequelize.STRING,
     status: Sequelize.BOOLEAN
 },{
     tableName: 'request',

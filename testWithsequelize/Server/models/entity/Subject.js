@@ -7,6 +7,10 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var Subject = connection.define('Subject',{
+
+    subjectName : Sequelize.STRING,
+    subjectCode : Sequelize.STRING,
+    subjectCredit : Sequelize.INTEGER,
     status: Sequelize.BOOLEAN
 },{
     tableName: 'subject',

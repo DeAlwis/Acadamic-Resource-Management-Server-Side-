@@ -29,8 +29,8 @@ var Relationship = function() {
     Models.Subject.hasMany(Models.FeedBackSession)
     Models.FeedBackSession.belongsTo(Models.Subject)
 
-    Models.Feedback.hasMany(Models.Question)
-    Models.Question.belongsTo(Models.Feedback)
+    Models.Question.hasMany(Models.Feedback)
+    Models.Feedback.belongsTo(Models.Question)
 
     Models.Center.belongsTo(Models.Subject)
     Models.Subject.hasMany(Models.Center)
@@ -76,17 +76,24 @@ var Relationship = function() {
     Models.Lecturer.hasMany(Models.FeedBackSession)
     Models.FeedBackSession.belongsTo(Models.Lecturer)
 
+    Models.Subject.belongsToMany(Models.Lecturer,{through: 'SubjectLecturer'})
+    Models.Lecturer.belongsToMany(Models.Subject,{through: 'SubjectLecturer'})
+
     Models.FeedBackSession.belongsTo(Models.Subject)
+
+    Models.Request.belongsTo(Models.Subject)
+
     Models.FeedBackSession.belongsTo(Models.Center)
+
     Models.FeedBackSession.belongsTo(Models.Faculty)
+
     Models.FeedBackSession.belongsTo(Models.Department)
+
     Models.FeedBackSession.belongsTo(Models.Batch)
 
+    Models.Room.belongsTo(Models.Faculty)
 
-
-
-
-
+    Models.Hod.belongsTo(Models.Department)
 
 
 

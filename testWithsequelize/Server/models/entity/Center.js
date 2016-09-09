@@ -7,6 +7,7 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var Center = connection.define('Center',{
+    centerName : Sequelize.STRING,
     status: Sequelize.BOOLEAN
 },{
     tableName: 'center',

@@ -8,8 +8,8 @@ var connection  = require('./../Connection');
 
 var Lecturer = connection.define('Lecturer',{
     lecturerFullName: Sequelize.STRING,
-    lecturerId:Sequelize.STRING,
-    status: Sequelize.BOOLEAN
+    status: Sequelize.BOOLEAN,
+    lecturerId:Sequelize.STRING
 },{
     tableName: 'lecturer',
     updatedAt: 'updatedAt',

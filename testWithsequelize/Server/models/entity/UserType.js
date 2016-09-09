@@ -16,4 +16,5 @@ var UserType = connection.define('userType', {
     paranoid: true
 });
 
+
 module.exports = UserType;

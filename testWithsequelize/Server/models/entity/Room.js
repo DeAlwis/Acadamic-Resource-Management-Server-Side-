@@ -7,6 +7,7 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var Room = connection.define('Room',{
+    roomName : Sequelize.STRING,
     status: Sequelize.BOOLEAN
 },{
     tableName: 'room',

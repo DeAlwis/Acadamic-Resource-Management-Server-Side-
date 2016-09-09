@@ -7,6 +7,11 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var Feedback = connection.define('Feedback',{
+    answerOneCount : Sequelize.INTEGER,
+    answerTwoCount : Sequelize.INTEGER,
+    answerThreeCount : Sequelize.INTEGER,
+    answerFourCount : Sequelize.INTEGER,
+    answerFiveCount : Sequelize.INTEGER,
     status: Sequelize.BOOLEAN
 },{
     tableName: 'feedback',

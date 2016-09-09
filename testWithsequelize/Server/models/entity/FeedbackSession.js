@@ -8,9 +8,12 @@ var connection  = require('./../Connection');
 
 var FeedbackSession = connection.define('FeedbackSession',{
 
+    feedbackSessionDate : Sequelize.DATEONLY,
+    feedbackSessionStartTime : Sequelize.TIME,
+    feedbackSessionEndTime : Sequelize.TIME,
     status: Sequelize.BOOLEAN
 },{
-    tableName: 'feedback_session',
+    tableName: 'feedbackSession',
     updatedAt: 'updatedAt',
     createdAt: 'createdAt',
     paranoid: true

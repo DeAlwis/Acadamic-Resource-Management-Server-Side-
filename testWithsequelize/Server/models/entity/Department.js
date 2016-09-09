@@ -7,6 +7,7 @@ var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
 var Department = connection.define('Department',{
+    DepartmentName : Sequelize.STRING,
     status: Sequelize.BOOLEAN
 },{
     tableName: 'department',
