@@ -1,5 +1,6 @@
 /**
  * Created by User on 9/9/2016.
+ * Developer: Amila
  */
 var ControllerMap = require('../../Controller/ControllerMap');
 var UserTypeController = ControllerMap.UserTypeController;

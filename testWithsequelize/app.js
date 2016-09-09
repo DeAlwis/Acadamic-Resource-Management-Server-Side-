@@ -8,6 +8,7 @@ var routes = require('./Server/routes/index');
 var Models = require('./Server/models/Models');
 var Relationship = require('./Server/models/Relationship');
 var app = express();
+var cors = require('cors');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors());
 app.use('/', routes);
 
 
