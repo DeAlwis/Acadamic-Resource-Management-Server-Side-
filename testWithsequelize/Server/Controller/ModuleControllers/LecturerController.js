@@ -30,6 +30,26 @@ LecturerController = function() {
             res.send(data);
         });
     }
+
+    this.delete = function(LectureInstance, res) {
+        Lecturer.destroy({
+            where: {
+                lecturerId: LectureInstance.lecturerId
+            }
+        })
+    }
+
+    this.getEachLecturer = function(LecturerName, res) {
+        Lecturer.find({
+            where: {
+               lecturerFullName :{
+                   $like: LecturerName
+               }
+            }
+        }).then(function(data) {
+        res.send(data);
+    })
+    }
 };
 
 module.exports = new LecturerController();

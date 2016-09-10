@@ -18,4 +18,12 @@ router.post('/', function(req, res, next) {
 router.put('/', function(req, res, next) {
     LecturerController.update(req.body, res);
 });
+
+router.get('/:lecturername', function(req, res, next) {
+    LecturerController.getEachLecturer(req.params.lecturername, res);
+});
+
+router.delete('/', function(req, res, next) {
+    LecturerController.delete(req.body, res)
+})
 module.exports = router;
