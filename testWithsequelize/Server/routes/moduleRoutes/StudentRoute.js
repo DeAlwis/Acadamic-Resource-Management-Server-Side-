@@ -1,5 +1,6 @@
 /**
  * Created by User on 9/9/2016.
+ * Developer: Amila
  */
 var express = require('express');
 var router = express.Router();
@@ -20,5 +21,9 @@ router.put('/', function(req, res, next) {
 
 router.delete('/', function(req, res, next) {
     StudentController.delete(req.body, res);
-})
+});
+
+router.get('/:studentNo', function(req, res, next) {
+    StudentController.getStudent(req.params.studentNo, res);
+});
 module.exports = router;

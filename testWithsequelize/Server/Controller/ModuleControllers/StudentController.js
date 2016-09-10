@@ -43,6 +43,16 @@ StudentController = function() {
             }
         });
     };
+
+    this.getStudent = function(StudentNo, res) {
+        Student.find({
+            where: {
+                studentDitNo: StudentNo
+            }
+        }).then(function(data) {
+            res.send(data);
+        });
+    };
 };
 
 module.exports = new StudentController();
